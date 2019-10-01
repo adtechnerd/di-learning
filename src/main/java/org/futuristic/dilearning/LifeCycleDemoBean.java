@@ -3,6 +3,9 @@
  */
 package org.futuristic.dilearning;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -81,4 +84,22 @@ public class LifeCycleDemoBean
 		System.out.println("## The LifeCycleDemoBean calling after properties are set");
 	}
 
+	
+	@PostConstruct
+	public void postConstructMethod() {
+		System.out.println("## Getting called postconstruct");
+	}
+	
+	@PreDestroy
+	public void preDestroyMethod() {
+		System.out.println("## Getting predestroyed called");
+	}
+	
+	public void beforeInit() {
+		System.out.println("## Before Init called by Bean post processor");
+	}
+	
+	public void afterInit() {
+		System.out.println("## After Init called by Bean post processor");
+	}
 }
