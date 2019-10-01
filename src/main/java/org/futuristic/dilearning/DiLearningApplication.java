@@ -4,7 +4,6 @@ import org.futuristic.dilearning.controller.ConstructorInjectedController;
 import org.futuristic.dilearning.controller.PropertyInjectedController;
 import org.futuristic.dilearning.controller.SetterInjectedController;
 import org.futuristic.dilearning.my.bean.MyWorld;
-import org.futuristic.dilearning.service.GreetingImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

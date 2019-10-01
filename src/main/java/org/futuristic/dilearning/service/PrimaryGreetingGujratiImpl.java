@@ -8,8 +8,16 @@ import org.springframework.stereotype.Service;
 @Primary
 @Profile({"gu", "default"})
 public class PrimaryGreetingGujratiImpl implements IGreeting {
-    @Override
+	
+	private GreetingRepository repository;
+	
+    public PrimaryGreetingGujratiImpl(GreetingRepository repository) {
+		super();
+		this.repository = repository;
+	}
+
+	@Override
     public String greeting() {
-        return "હું ભગવાન છું";
+        return repository.getGujratiGreeting();
     }
 }
