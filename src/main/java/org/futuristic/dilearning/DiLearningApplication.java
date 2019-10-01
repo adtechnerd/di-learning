@@ -23,6 +23,8 @@ public class DiLearningApplication {
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
 
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+        
+        ctx.getBean("lifeCycleDemoBean");
     }
 
 }
